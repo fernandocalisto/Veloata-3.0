@@ -1,0 +1,174 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #001f3f; /* Azul marinho */
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3; /* Garantir que esteja acima de outros conteúdos */
+}
+
+.logo {
+    width: 100px;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sectitle h1 {
+    font-size: 4rem;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #001f3f; /* Azul marinho */
+    color: white;
+}
+
+/* Fundo alternado para amarelo */
+.about-section.alt-bg {
+    background-color: #ffcc00; /* Amarelo */
+    color: #001f3f; /* Azul marinho */
+}
+
+/* Configuração do container flexível */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Tamanho máximo da imagem */
+    border-radius: 10px;
+}
+
+/* Alternância da posição da imagem e texto */
+#quem-somos .content-container {
+    flex-direction: row; /* Imagem à esquerda */
+}
+
+#historia .content-container {
+    flex-direction: row; /* Imagem à esquerda */
+}
+
+#objetivo .content-container {
+    flex-direction: row; /* Imagem à direita */
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-content {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        top: 10px;
+        left: 10px; /* Ajustar para telas menores */
+        margin-bottom: 0px;
+    }
+
+    header.hero-section{
+        height: 80px;
+    }
+
+    .sectitle h1 {
+        font-size: 2.5rem;
+        margin-top: 80px;
+    }
+
+    .logo {
+        margin-right: 15px; /* Centraliza o logo e adiciona espaço inferior */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+
+    .about-section {
+        flex-direction: column; /* Muda para layout de coluna */
+        text-align: center;
+        padding: 10px 10px; /* Reduz o padding em telas menores */
+    }
+
+    .text-content {
+        padding: 20px 10px; /* Ajusta o padding para telas menores */
+    }
+
+    .text-content h2 {
+        font-size: 2rem; /* Ajusta o tamanho da fonte dos títulos */
+    }
+
+    .text-content p {
+        font-size: 1rem; /* Reduz o tamanho da fonte dos parágrafos */
+    }
+
+    .image-content {
+        margin-bottom: 20px; /* Adiciona espaço inferior à imagem */
+    }
+
+    .image-content img {
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+        height: auto;
+    }
+
+    /* Alinhamento para seções específicas */
+    #quem-somos .content-container,
+    #historia .content-container,
+    #objetivo .content-container {
+        flex-direction: column; /* Layout em coluna para todas as seções */
+    }
+}

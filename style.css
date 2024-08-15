@@ -1,0 +1,321 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('imagens/background/header.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 100px; /* Ajusta a distância do topo para evitar sobreposição */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3; /* Garantir que esteja acima de outros conteúdos */
+}
+
+.logo {
+    width: 100px;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 2rem; /* Ajuste conforme necessário */
+    color: white; /* Garantir que o texto seja legível sobre o fundo */
+    margin: 0; /* Remover margem padrão */
+    line-height: 1.2; /* Ajuste o espaçamento vertical do texto */
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+h1, h2, p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight:bold;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.primary-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: width 0.3s ease, padding 0.3s ease; /* Animação de expansão */
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    width: 60px; /* Largura inicial do botão (quando não expandido) */
+    height: 60px;
+}
+
+#whatsapp-button:hover {
+    width: 200px; /* Largura expandida do botão */
+    padding-right: 20px; /* Adiciona espaço para o texto expandido */
+}
+
+#whatsapp-button a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp-icon img {
+    width: 40px; /* Tamanho do ícone do WhatsApp */
+    height: 40px;
+}
+
+.whatsapp-text {
+    margin-left: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: normal;
+}
+
+#whatsapp-button:hover .whatsapp-text {
+    opacity: 1; /* Mostra o texto ao passar o mouse */
+}
+
+.services-section {
+    background-color: #001f3f; /* Azul marinho escuro */
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #0d3a63; /* Azul um pouco mais claro para destacar o item */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.service-btn {
+    background-color: #ffcc00;
+    color: #001f3f;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.service-btn:hover {
+    background-color: #e6b800;
+
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    background-color: #ffcc00; /* Card fica amarelo */
+    color: #001f3f;
+}
+
+.service-item:hover .service-btn {
+    background-color: #001f3f; /* Botão fica azul escuro */
+    color: #ffcc00; /* Texto do botão fica amarelo */
+}
+
+.insta .teste{
+    background-color: #001f3f; /* Azul marinho escuro */
+    height: auto;
+    text-align: center;
+}
+
+#intitle{
+    font-size: 3rem;
+    padding-bottom:20px;
+}
+
+
+.posts{
+    background-color: #001f3f;
+    padding-left:100px;
+    padding-right:100px;
+}
+
+.insta{
+    height:auto;
+    background-color: #001f3f;
+}
+
+.secmaps{
+    background-color: #001f3f;
+    text-align: center;
+    width:auto;
+    height:auto;
+}
+
+.maptitle{
+    font-size:3rem;
+    padding:40px;
+}
+
+.maps{
+    height:auto;
+}
+
+.mapa{
+    height:500px;
+    width: 900px;
+    border-radius: 20px;
+    margin-bottom:20px;
+}
+
+
+@media (max-width: 768px) {
+    .insta{
+        height:auto;
+        padding-bottom:10px;
+    }
+
+    .posts{
+        padding:10px;
+    }
+
+    .mapa{
+        width:auto;
+        height:300px;
+    }
+
+    .header-content {
+        top: 10px;
+        left: 10px; /* Ajustar para telas menores */
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    .buttons {
+        flex-direction:row;
+        gap: 10px;
+    }
+    p{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .content{
+        top:25px;
+    }
+    .hero-section{
+        height:900px;
+    }
+}
+
