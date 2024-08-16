@@ -277,12 +277,31 @@ h1, h2, p {
     margin-bottom:20px;
 }
 
+.ava{
+    background-color:#001f3f;
+}
+
+.avatitle{
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 60px;
+    font-size: 3rem;
+}
+
 
 @media (max-width: 768px) {
     .insta{
         height:auto;
         padding-bottom:10px;
     }
+
+    .contava{
+        max-width: 100%;
+        overflow-x: hidden; /* Evitar que o conteúdo transborde horizontalmente */
+        padding: 10px; /* Adicionar um pouco de padding */
+    }
+
+    
 
     .posts{
         padding:10px;
