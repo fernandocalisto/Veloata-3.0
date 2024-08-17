@@ -167,6 +167,17 @@ h1, h2, p {
         top: 10px;
         left: 10px; /* Ajustar para telas menores */
     }
+    .servtitle{
+        font-size: 2.5rem;
+    }
+
+    .topic{
+        font-size:2rem;
+    }
+
+    .topictext{
+        font-size: 1.25rem;
+    }
 
     header.hero-section{
         height: 120px;
